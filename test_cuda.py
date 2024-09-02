@@ -8,11 +8,9 @@ print(x)
 is_cuda_available = torch.cuda.is_available()
 
 print("=============>")
-print("Is cuda enabled? {0}".format(is_cuda_available))
+print("Is CUDA enabled? {0}".format(is_cuda_available))
 
 sys.stdout.flush()
 
-if ((is_cuda_available)):
-    sys.exit(0)
-else:
-    sys.exit(1)
+if not is_cuda_available:
+    print("##teamcity[message text='CUDA is not avaiable' status='ERROR']")
