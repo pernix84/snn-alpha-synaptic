@@ -5,10 +5,10 @@ import sys
 x = torch.rand(5, 3)
 print(x)
 
-(is_cuda_available) = torch.cuda.is_available()
+is_cuda_available = torch.cuda.is_available()
 
 print("=============>")
-print("Is cuda enabled? {0}".format())
+print("Is cuda enabled? {0}".format(is_cuda_available))
 
 sys.stdout.flush()
 
